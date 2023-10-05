@@ -96,4 +96,12 @@ resource "aws_route_table" "BB_route_table" {
   }
 }
 
+resource "aws_internet_gateway" "BB_internet_gateway" {
+  vpc_id = aws_vpc.BB_vpc.id
+
+  tags = {
+    Name        = "BB_internet_gateway"
+    AcademyUser = "Beatriz"
+  }
+}
 
