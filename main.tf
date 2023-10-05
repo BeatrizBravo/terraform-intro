@@ -105,3 +105,19 @@ resource "aws_internet_gateway" "BB_internet_gateway" {
   }
 }
 
+resource "aws_route_table_association" "public_subnet1_association" {
+  subnet_id      = aws_subnet.BB_subnet1_public.id
+  route_table_id = aws_route_table.BB_route_table.id
+}
+
+resource "aws_route_table_association" "public_subnet2_association" {
+  subnet_id      = aws_subnet.BB_subnet2_public.id
+  route_table_id = aws_route_table.BB_route_table.id
+}
+
+resource "aws_route_table_association" "public_subnet3_association" {
+  subnet_id      = aws_subnet.BB_subnet3_public.id
+  route_table_id = aws_route_table.BB_route_table.id
+}
+
+
