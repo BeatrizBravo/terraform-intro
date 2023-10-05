@@ -20,7 +20,7 @@ resource "aws_vpc" "BB_vpc" {      #main = name of the resource
   tags = {
     Name        = "BB_vpc"
     AcademyUser = "Beatriz"
-    Foo         = "Bar"
+    Foo         = "Bar" //If we update an already created resource, we will see a yellow ~Tilde in the console.
   }
 }
 

@@ -18,3 +18,6 @@ Destroy a resource
 ```Terraform
 terraform destroy
 ```
+
+
+Resource actions in Terraform are indicated with the following symbols:<br> + create<br>   ~ update in-place <br>- destroy <br>-/+ destroy and then create replacement
