@@ -1,4 +1,4 @@
-# terraform-intro
+
 ## Commands:
 Check syntax:
 ```Terraform
@@ -21,3 +21,6 @@ terraform destroy
 
 
 Resource actions in Terraform are indicated with the following symbols:<br> + create<br>   ~ update in-place <br>- destroy <br>-/+ destroy and then create replacement
+
+## main.tf
+![Vpc with 6 subnet in 2 availability and internet gateway](./vpc-6subnets.drawio%20(1).png)

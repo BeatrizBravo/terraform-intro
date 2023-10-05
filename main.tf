@@ -44,9 +44,46 @@ resource "aws_subnet" "BB_subnet1_public" {
   }
 
 }
-# TODO: 
-# -add 4 more subnets
-# -create a route table
-# -public subnets can have internet gateway 
+
+
+resource "aws_subnet" "BB_subnet2_private" {
+  vpc_id            = aws_vpc.BB_vpc.id
+  cidr_block        = "10.2.3.0/24"
+  availability_zone = "eu-west-2a"
+  tags = {
+    Name        = "BB_subnet_private2"
+    AcademyUser = "Beatriz"
+  }
+}
+
+resource "aws_subnet" "BB_subnet2_public" {
+  vpc_id            = aws_vpc.BB_vpc.id
+  cidr_block        = "10.2.4.0/24"
+  availability_zone = "eu-west-2a"
+  tags = {
+    Name        = "BB_subnet_private2"
+    AcademyUser = "Beatriz"
+  }
+}
+
+resource "aws_subnet" "BB_subnet3_private" {
+  vpc_id            = aws_vpc.BB_vpc.id
+  cidr_block        = "10.2.5.0/24"
+  availability_zone = "eu-west-2b"
+  tags = {
+    Name        = "BB_subnet_private3"
+    AcademyUser = "Beatriz"
+  }
+}
+
+resource "aws_subnet" "BB_subnet3_public" {
+  vpc_id            = aws_vpc.BB_vpc.id
+  cidr_block        = "10.2.6.0/24"
+  availability_zone = "eu-west-2b"
+  tags = {
+    Name        = "BB_subnet_private3"
+    AcademyUser = "Beatriz"
+  }
+}
 
 
