@@ -87,3 +87,13 @@ resource "aws_subnet" "BB_subnet3_public" {
 }
 
 
+resource "aws_route_table" "BB_route_table" {
+  vpc_id = aws_vpc.BB_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0" //CIDR: From what IP we can enter
+    gateway_id = aws_internet_gateway.BB_internet_gateway.id
+  }
+}
+
+
